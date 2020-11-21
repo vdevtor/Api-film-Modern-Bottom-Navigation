@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/btnHome"
+        android:icon="@drawable/ic_home_black"
+        android:title="" />
+
+    <item
+        android:id="@+id/btnSearch"
+        android:icon="@drawable/ic_search_black"
+        android:title="" />
+
+    <item
+        android:id="@+id/btnAdd"
+        android:icon="@drawable/ic_add_black"
+        android:title="" />
+    <item
+        android:id="@+id/btnNot"
+        android:title=""
+        android:icon="@drawable/ic_notification_black"
+       />
+
+
+    <item
+        android:id="@+id/btnPerfil"
+        android:icon="@drawable/ic_person_black"
+        android:title="" />
+
+
+</menu>

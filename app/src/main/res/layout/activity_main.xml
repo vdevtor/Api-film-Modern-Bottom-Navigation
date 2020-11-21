@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="68dp"
+      android:layout_alignParentBottom="true"
+      android:background="@drawable/bottom_shape_navigation"
+      android:padding="5dp"
+      android:layout_alignParentStart="true"
+      android:layout_margin="10dp"
+      android:gravity="center"
+      android:orientation="horizontal"
+      android:elevation="5dp"
+      android:layout_marginEnd="15dp"
+      android:layout_marginStart="15dp"
+      android:layout_marginTop="15dp"
+      android:layout_marginBottom="15dp"
+      android:layout_alignParentLeft="true">
+
+      <com.google.android.material.bottomnavigation.BottomNavigationView
+          android:id="@+id/bottom_navigation"
+          android:layout_width="match_parent"
+          android:icon="@drawable/custom_icons"
+          android:backgroundTintMode="src_over"
+          android:background="@color/white"
+          app:itemIconTint="@drawable/custom_icons"
+          app:itemRippleColor="@color/colorAccent"
+          android:layout_height="match_parent"
+          app:menu="@menu/menu_interacative"
+          app:itemIconSize="25dp"
+          />
+  </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/mViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+
+</RelativeLayout>
