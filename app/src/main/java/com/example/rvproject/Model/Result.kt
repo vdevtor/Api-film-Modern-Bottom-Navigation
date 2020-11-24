@@ -1,6 +1,7 @@
 package com.example.rvproject.Model
 
 import android.os.Parcelable
+import androidx.recyclerview.widget.DiffUtil
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
@@ -19,4 +20,18 @@ data class Result(
     val video: Boolean,
     val vote_average: Double,
     val vote_count: Int
-):Parcelable
+):Parcelable{
+
+    companion object {
+        var DIFF_CALLBACK: DiffUtil.ItemCallback<Result> = object : DiffUtil.ItemCallback<Result>() {
+            override fun areItemsTheSame(oldItem: Result, newItem: Result): Boolean {
+                return oldItem.id == newItem.id
+            }
+
+            override fun areContentsTheSame(oldItem: Result, newItem: Result): Boolean {
+                return oldItem.id == newItem.id
+            }
+        }
+    }
+
+}

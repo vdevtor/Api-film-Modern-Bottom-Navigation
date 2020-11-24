@@ -16,6 +16,16 @@ import com.example.rvproject.ViewModel.TopRatedViewModel
 class TopRatedFragment : Fragment() {
 
       private lateinit var viewModel: TopRatedViewModel
+    private val topRatedAdapter : TopRatedAdapter by lazy {
+        TopRatedAdapter{
+            val movieClicked = it
+
+        }
+
+    }
+
+
+
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -27,23 +37,25 @@ class TopRatedFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel = ViewModelProvider(this).get(TopRatedViewModel::class.java)
-        viewModel.getTopRated()
 
-        viewModel.onResultTopRated.observe(this,{
 
-            it?.let {
+
+
+
+        viewModel.moviePagedList?.observe(this,{
+            topRatedAdapter.submitList(it)
+        })
+
+
                 view.findViewById<RecyclerView>(R.id.rvTopRated).apply {
                     layoutManager = GridLayoutManager(this.context,3)
-                    adapter = TopRatedAdapter(it.results)
+                    adapter = topRatedAdapter
 
                 }
 
 
             }
-        })
+        }
 
 
 
-
-    }
-}

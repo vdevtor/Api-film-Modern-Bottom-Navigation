@@ -11,9 +11,9 @@ class MainBussiness{
 
     }
 
-    suspend fun getRated(): ResponseApi {
+    suspend fun getRated(pageNumber : Int): ResponseApi {
 
-        val response = repository.getTopRated()
+        val response = repository.getTopRated(pageNumber)
         return if (response is ResponseApi.Sucess) {
             val topRated = response.data as TopRated
             topRated.results.forEach {

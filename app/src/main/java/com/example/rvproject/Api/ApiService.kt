@@ -6,6 +6,8 @@ import com.example.rvproject.Utils.Constants.Api.API_AUTH_NAME
 import com.example.rvproject.Utils.Constants.Api.API_AUTH_VALUE
 import com.example.rvproject.Utils.Constants.Api.API_CONTENT_TYPE_NAME
 import com.example.rvproject.Utils.Constants.Api.API_CONTENT_TYPE_VALUE
+import com.example.rvproject.Utils.Constants.Api.QUERY_PARAM_LANGUAGE_LABEL
+import com.example.rvproject.Utils.Constants.Api.QUERY_PARAM_LANGUAGE_VALUE
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -42,6 +44,15 @@ private fun getInterceptorClient(): OkHttpClient {
                 .build()
             chain.proceed(newRequest)
         }
+        .addInterceptor { chain ->
+            val url = chain.request().url().newBuilder()
+                .addQueryParameter(QUERY_PARAM_LANGUAGE_LABEL, QUERY_PARAM_LANGUAGE_VALUE)
+                .build()
+            val newRequest = chain.request().newBuilder().url(url).build()
+            chain.proceed(newRequest)
+        }
     return interceptor.build()
 }
+
+
 

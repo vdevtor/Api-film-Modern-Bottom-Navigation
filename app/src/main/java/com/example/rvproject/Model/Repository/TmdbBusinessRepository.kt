@@ -5,10 +5,10 @@ import com.example.rvproject.Api.ResponseApi
 import java.lang.Exception
 
 class TmdbBusinessRepository {
-    suspend fun getTopRated(): ResponseApi{
+    suspend fun getTopRated(pageNumber: Int): ResponseApi{
 
         return try{
-            val response = ApiService.tmdb.topRated()
+            val response = ApiService.tmdb.topRated(pageNumber)
 
             if (response.isSuccessful){
                 ResponseApi.Sucess(response.body())
