@@ -5,7 +5,11 @@
     android:id="@+id/fragment_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Activity.MainActivity">
+
+
+
+
 
   <LinearLayout
       android:layout_width="match_parent"
@@ -24,6 +28,7 @@
       android:layout_marginBottom="15dp"
       android:layout_alignParentLeft="true">
 
+
       <com.google.android.material.bottomnavigation.BottomNavigationView
           android:id="@+id/bottom_navigation"
           android:layout_width="match_parent"
@@ -38,10 +43,6 @@
           />
   </LinearLayout>
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/mViewPager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
 
 
 

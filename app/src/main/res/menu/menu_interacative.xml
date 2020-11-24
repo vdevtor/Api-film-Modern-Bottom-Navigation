@@ -8,13 +8,13 @@
         android:title="" />
 
     <item
-        android:id="@+id/btnSearch"
-        android:icon="@drawable/ic_search_black"
+        android:id="@+id/btnTopRated"
+        android:icon="@drawable/ic_fire"
         android:title="" />
 
     <item
-        android:id="@+id/btnAdd"
-        android:icon="@drawable/ic_add_black"
+        android:id="@+id/btnTopActors"
+        android:icon="@drawable/ic_person_black"
         android:title="" />
     <item
         android:id="@+id/btnNot"
@@ -23,10 +23,6 @@
        />
 
 
-    <item
-        android:id="@+id/btnPerfil"
-        android:icon="@drawable/ic_person_black"
-        android:title="" />
 
 
 </menu>

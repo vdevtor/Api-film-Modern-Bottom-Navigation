@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/trans_purple"
+    android:background="@color/trans_green"
     tools:context=".Fragment.TopRatedFragment">
 
 
@@ -13,12 +13,31 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scaleType="fitXY"
-        android:src="@drawable/comingsoon"
+        android:src="@drawable/banner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
 
         />
+
+
+
+
+    <TextView
+        android:id="@+id/tvTopRated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginRight="18dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Top\nRated"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -27,7 +46,7 @@
 
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvUpComing"
+            android:id="@+id/rvTopRated"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
